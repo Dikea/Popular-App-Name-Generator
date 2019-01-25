@@ -1,5 +1,1 @@
 data filter=lfs diff=lfs merge=lfs -text
-model_v1 filter=lfs diff=lfs merge=lfs -text
-model_v2 filter=lfs diff=lfs merge=lfs -text
-model_v3 filter=lfs diff=lfs merge=lfs -text
-model_v4 filter=lfs diff=lfs merge=lfs -text
