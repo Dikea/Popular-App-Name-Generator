@@ -23,7 +23,7 @@ nohup python -u server.py --batch_size=1 --use_beam_search=True --root_path=mode
 
 ### Example
 
-When you start the server, the address if http://you_compute_ip, then open it in browser.
+When you start the server, the address is http://you_compute_ip, then open it in browser.
 
 #### Step 1. Input keywords related to your app
 
