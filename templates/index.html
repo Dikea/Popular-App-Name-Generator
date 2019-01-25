@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2019 Google AI ML Winter Camp Project Demo - KingFish Team</title>
+    <link rel="shortcut icon" href="{{ static_url('fav.ico') }}">
+    <link href="{{ static_url("index.css") }}" rel="stylesheet">
+    <script src="{{ static_url("footer.js") }}"></script>
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- HEADER -->
+      <div class="bgcolor1">
+	<table width="100%">
+	  <tbody>
+	    <tr valign="middle">
+	      <td class="header_left">
+              <img src="{{ static_url("logo.png") }}" width="96" height="96">
+	      </td>
+          <!-- column 1 -->
+	      <td style="text-align: left">
+			<h2>Automatic App Name Generator - A tool to generate popular app name</h2>
+	      </td>
+          <!-- column 2 -->
+	      <td style="text-align: left">
+		<h3>Kingfish Team</h3>
+	      </td>
+	      <td style="text-align: right; font-size: 80%">
+		<!--<div style="position: absolute; text-align: left; right: 18px; top: 30px">
+		  <br>
+	      <td style="text-align: left">
+		<h3>Kingfish</h3>
+	      </td>
+        </div> -->
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+      </div>
+
+      <!-- BODY -->
+      <br>
+      <div>
+	<fieldset>
+	  <legend>&nbsp;Enter keywords that are closely related to the application&nbsp;</legend>
+      </br>
+	  <form method="post" align="left">
+        <!--<textarea name="post_args", rows="7", cols="200", placeholder="Please separate your input keywords by space..."></textarea></br>-->
+        <textarea name="post_args", placeholder=" Please separate your input keywords by space..."></textarea></br>
+	    <input type="submit" value="Submit">
+	  </form>
+	</fieldset>
+    <!--
+    <p>&nbsp;</p>
+	<fieldset>
+	  <legend>&nbsp;Recommend App Name &nbsp;</legend>
+	    <p>Results:&nbsp;</p>
+	</fieldset>
+    -->
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer_outer bgcolor1">
+	<div id="myfooter">
+	  <div style="color: red">
+	    <p>WARNING: Unobtrusive Javascript not working!</p>
+	  </div>
+	</div>
+      </div>
+  </body>
+</html>

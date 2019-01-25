@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Google AI ML Winter Camp 2019 Show Demo</title>
+    <!-- Define my own favicon.ico using PNG format. -->
+    <!--<link rel="icon" type="image/png" href="logo.png">-->
+    <link rel="shortcut icon" href="{{ static_url('fav.ico') }}">
+    <link href="{{ static_url("index.css") }}" rel="stylesheet">
+    <script src="{{ static_url("footer.js") }}"></script>
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- HEADER -->
+      <div class="bgcolor1">
+	<table width="100%">
+	  <tbody>
+	    <tr valign="middle">
+	      <td class="header_left">
+              <img src="{{ static_url("logo.png") }}" width="96" height="96">
+	      </td>
+          <!-- column 1 -->
+	      <td style="text-align: left">
+		<h2>Automatic App Name Generator - A tool to generate popular app name</h2>
+	      </td>
+          <!-- column 2 -->
+	      <td style="text-align: left">
+		<h3>Kingfish Team</h3>
+	      </td>
+	      <td style="text-align: right; font-size: 80%">
+		<!--<div style="position: absolute; text-align: left; right: 18px; top: 30px">
+		  <br>
+	      <td style="text-align: left">
+		<h3>Kingfish</h3>
+	      </td>
+        </div> -->
+	      </td>
+	    </tr>
+	  </tbody>
+	</table>
+      </div>
+
+      <!-- BODY -->
+      <br>
+      <div>
+	<fieldset>
+	  <legend>&nbsp;Keywords that are closely related to the application&nbsp;</legend>
+      <p>&nbsp;{{keywords}}</p>
+	</fieldset>
+    <p>&nbsp;</p>
+	<fieldset>
+	    <legend>&nbsp;Recommend App Names &nbsp;</legend>
+        <table border="1">
+            <tr>
+                <th align="center"><b> Recommand App Name </b></th>
+                <th align="center" colspan="4"><b> Related App Info </b></th>
+            </tr>
+            <tr>
+                <th><b></b></th>
+                <th><b>Name</b></th>
+                <th align="center"><b> Rating </b></th>
+                <th align="center"><b> Installs </b></th>
+                <th align="center"><b> Reviews </b></th>
+            </tr>
+            {% for result in infer_results %}
+                {% block result %}
+                    <tr>
+                        <th>{{ escape(result["recommand_name"]) }}</th>
+                        <th>{{ escape(result["App"]) }}</th>
+                        <th align="center">{{ escape(result["Rating"]) }}</th>
+                        <th align="center">{{ escape(result["Installs"]) }}+</th>
+                        <th align="center">{{ escape(result["Reviews"]) }}</th>
+                    </tr>
+                {% end %}
+            {% end %} 
+        </table>
+</br>
+	</fieldset>
+        <br>
+        <form method="get" action="/">
+            <button type="submit">Back</button>
+        </form>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer_outer bgcolor1">
+	<div id="myfooter">
+	  <div style="color: red">
+	    <p>WARNING: Unobtrusive Javascript not working!</p>
+	  </div>
+	</div>
+      </div>
+  </body>
+</html>
